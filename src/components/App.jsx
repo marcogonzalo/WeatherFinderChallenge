@@ -1,6 +1,7 @@
 import React from "react";
 import TitleContainer from './TitleContainer/TitleContainer';
 import "./App.css";
+import WeatherInfo from "./WeatherInfo/WeatherInfo";
 
 const { REACT_APP_OPENWEATHERMAP_API_KEY } = process.env;
 
@@ -58,51 +59,7 @@ class App extends React.Component {
                     <input type="text" name="country" placeholder="es" />
                     <button>Get Weather</button>
                   </form>
-                  <div className="weather__info">
-                    {this.state.city && this.state.country && (
-                      <p className="weather__key">
-                        {" "}
-                        Location:
-                        <span className="weather__value">
-                          {" "}
-                          {this.state.city}, {this.state.country}
-                        </span>
-                      </p>
-                    )}
-                    {this.state.temperature && (
-                      <p className="weather__key">
-                        {" "}
-                        Temperature:
-                        <span className="weather__value">
-                          {" "}
-                          {this.state.temperature}{" "}
-                        </span>
-                      </p>
-                    )}
-                    {this.state.humidity && (
-                      <p className="weather__key">
-                        {" "}
-                        Humidity:
-                        <span className="weather__value">
-                          {" "}
-                          {this.state.humidity}{" "}
-                        </span>
-                      </p>
-                    )}
-                    {this.state.description && (
-                      <p className="weather__key">
-                        {" "}
-                        Conditions:
-                        <span className="weather__value">
-                          {" "}
-                          {this.state.description}{" "}
-                        </span>
-                      </p>
-                    )}
-                    {this.state.error && (
-                      <p className="weather__error">{this.state.error}</p>
-                    )}
-                  </div>
+                  <WeatherInfo info={this.state} />
                 </div>
               </div>
             </div>

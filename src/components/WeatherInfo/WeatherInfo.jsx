@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './WeatherInfo.css';
 
 function WeatherInfo({ info }) {
@@ -49,6 +50,21 @@ function WeatherInfo({ info }) {
             )}
         </div>
     );
+}
+
+WeatherInfo.propTypes = {
+    info: PropTypes.object,
+}
+
+WeatherInfo.defaultProps = {
+    info: {
+        temperature: undefined,
+        city: undefined,
+        country: undefined,
+        humidity: undefined,
+        description: undefined,
+        error: undefined,
+    }
 }
 
 export default WeatherInfo;

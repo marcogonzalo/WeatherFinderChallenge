@@ -3,26 +3,24 @@ import "./App.css";
 import TitleContainer from './TitleContainer/TitleContainer';
 import FormContainer from './FormContainer/FormContainer';
 
-class App extends React.Component {
-  render() {
+function App(props) {
     return (
-      <div>
-        <div className="wrapper">
-          <div className="main">
-            <div className="container-fluid">
-              <div className="row">
-                <TitleContainer
-                    title="Weather Finder"
-                    subtitle="Find out temperature, conditions and more..."
-                />
-                <FormContainer />
-              </div>
+        <div>
+            <div className="wrapper">
+                <div className="main">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <TitleContainer
+                                title="Weather Finder"
+                                subtitle="Find out temperature, conditions and more..."
+                            />
+                            <FormContainer />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     );
-  }
 }
 
 export default App;

@@ -48,7 +48,10 @@ class App extends React.Component {
           <div className="main">
             <div className="container-fluid">
               <div className="row">
-                <TitleContainer/>
+                <TitleContainer
+                    title="Weather Finder"
+                    subtitle="Find out temperature, conditions and more..."
+                />
                 <div className="col-7 form-container">
                   <form onSubmit={this.getWeather}>
                     <input type="text" name="city" placeholder="Madrid" />
